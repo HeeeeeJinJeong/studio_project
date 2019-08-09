@@ -7,8 +7,9 @@
 
 <a href="{% url 'appointment:create' %}" class="btn btn-outline-dark">write</a>
 
-{% for object in object_list %}
+
 <div class="card-columns">
+    {% for object in object_list %}
     <div class="card text-center">
         <div class="card-body">
             <h5 class="card-title">{{object.title}}</h5>
@@ -20,8 +21,9 @@
 
         <a href="{% url 'appointment:detail' object.id %}" class="btn btn-outline-dark">Detail</a>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
+
 
 {% if is_paginated %}
 <nav aria-label="Page navigation">

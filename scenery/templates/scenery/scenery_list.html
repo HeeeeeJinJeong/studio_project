@@ -17,26 +17,27 @@
     </div>
 </div>
 
-{% for object in object_list %}
-<div class="container port-top">
+
+<div class="card-deck container port-top">
     <div class="row">
-        <div class="col-md-4 col-sm-6">
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="{{object.room_image.url}}" alt="Project Name">
-                </div>
-                <div class="portfolio-info-fade">
-                    <ul>
-                        <li class="portfolio-project-name">{{object.category}}</li>
-                        <li class="read-more">
-                            <a href="{% url 'scenery:detail' object.slug %}" class="portfolio-btn btn">Detail</a>
-                        </li>
-                    </ul>
-                </div>
+        {% for object in object_list %}
+        <div class="card portfolio-item">
+            <img src="{{object.room_image.url}}" alt="Project Name">
+
+            <div class="portfolio-info-fade">
+                <ul>
+                    <li class="portfolio-project-name">{{object.category}}</li>
+                    <li class="read-more">
+                        <a href="{% url 'scenery:detail' object.slug %}" class="portfolio-btn btn">Detail</a>
+                    </li>
+                </ul>
             </div>
+
         </div>
+        {% endfor %}
     </div>
 </div>
-{% endfor %}
+
+
 
 {% endblock %}
