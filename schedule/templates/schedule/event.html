@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Event{% endblock %}
+
+{% block content %}
+
+<div class="clearfix">
+    <a class="btn btn-outline-info" href="{% url 'schedule:calendar' %}"> Calendar </a>
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    <table class="form form-table">
+        {{ form }}
+        <tr>
+            <td colspan="2">
+                <button type="submit" class="btn btn-outline-info right mt-3"> Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}

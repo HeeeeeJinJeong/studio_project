@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block title %}Location{% endblock %}
+
+
+{% block content %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>간단한 지도 표시하기</title>
+</head>
+
+<body>
+
+<div id="map" class='equalheight1a' style="width:100%; height:400px; text-align:center;">
+    <script type="text/javascript"
+            src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ven8fq47tc&callback=initMap"></script>
+    <script type="text/javascript">
+// 37.547781, 127.089916
+
+var mapOptions = {
+    center: new naver.maps.LatLng(37.547781, 127.089916),
+    zoom: 10
+};
+
+var map = new naver.maps.Map('map', mapOptions);
+
+map.setSize(new naver.maps.Size(960, 400));
+
+// 줌 컨트롤
+var map = new naver.maps.Map('map', {
+        scaleControl: false,
+        logoControl: false,
+        mapDataControl: false,
+        zoomControl: true,
+        minZoom: 1
+    });
+
+// 위치, 주소 표시
+var HOME_PATH = window.HOME_PATH || '.';
+
+var mono = new naver.maps.LatLng(37.547781, 127.089916),
+    map = new naver.maps.Map('map', {
+        center: mono.destinationPoint(0, 500),
+        zoom: 10
+    }),
+    marker = new naver.maps.Marker({
+        map: map,
+        position: mono
+    });
+
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3 class="text-center mt-2">MonoGround</h3>',
+        '   <p class="mr-3 ml-3">서울 광진구 천호대로136길 50 지하1층<br />',
+        '       Tel. 010-5011-7314<br />',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString,
+    maxWidth: 700,
+    backgroundColor: "#eee",
+    borderColor: "black",
+    borderWidth: 2,
+    anchorSize: new naver.maps.Size(30, 30),
+    anchorSkew: true,
+    anchorColor: "#eee",
+    pixelOffset: new naver.maps.Point(20, -20)
+});
+
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+infowindow.open(map, marker);
+
+//----------------------------------------------------
+
+var $window = $(window);
+
+function getMapSize() {
+    var size = new naver.maps.Size($window.width() - 15, $window.height() - 15);
+
+    return size;
+};
+
+$window.on('resize', function() {
+    map.setSize(getMapSize());
+});
+
+
+
+
+    </script>
+</div>
+
+    <div class="row">
+        <div class="col-18">
+            <div class="equalheight1a mb-2 mt-2">
+                {% for object in object_list %}
+                <div class="block-serv3 col-xs-offset-2">
+                    <h3 class="block-serv-title">{{object.title}}</h3>
+                    <p>{{object.description|safe}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-10"></div>
+    </div><!-- /row -->
+
+</body>
+</html>
+
+{% endblock %}

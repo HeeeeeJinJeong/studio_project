@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Room List{% endblock %}
+
+
+{% block content %}
+
+{% include 'scenery/category_list.html' %}
+
+<div class="container padding-inner">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 text-center">
+            <img src="{% static 'images/section.png' %}" alt="Project Name" style="max-width: 57%;">
+            <p>샘플 사진은 화각 풀프레임 센서 기준 16mm/24mm/35mm렌즈로 촬영되었습니다.</p>
+        </div>
+    </div>
+</div>
+
+{% for object in object_list %}
+<div class="container port-top">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="{{object.room_image.url}}" alt="Project Name">
+                </div>
+                <div class="portfolio-info-fade">
+                    <ul>
+                        <li class="portfolio-project-name">{{object.category}}</li>
+                        <li class="read-more">
+                            <a href="{% url 'scenery:detail' object.slug %}" class="portfolio-btn btn">Detail</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

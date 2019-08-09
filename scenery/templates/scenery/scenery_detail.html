@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Room{% endblock %}
+
+
+{% block content %}
+
+<div class="section padding-inner">
+    <div class="container">
+        <div class="row">
+            <!-- Image Column -->
+            <div class="col-sm-6">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <a href="#"><img src="{{object.room_image.url}}" alt="Project Name"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Image Column -->
+
+            <!-- Project Info Column -->
+            <div class="portfolio-item-description col-sm-6">
+                <h3>{{object.category}}</h3>
+                <p>{{object.description|safe}}</p>
+            </div>
+            <!-- End Project Info Column -->
+        </div>
+        <!-- End Row -->
+    </div>
+</div>
+
+<!-- gallery -->
+<div id="photos">
+    <div class="thumbs grid">
+        <figure class="effect-honey">
+            <img src="{{object.room_image.url}}" alt=""/>
+        </figure>
+    </div>
+
+    <div class="thumbs grid">
+        <figure class="effect-honey">
+            <img src="{{object.room_image2.url}}" alt=""/>
+        </figure>
+    </div>
+
+    {% if object.room_image3 %}
+    <div class="thumbs grid">
+        <figure class="effect-honey">
+            <img src="{{object.room_image3.url}}" alt=""/>
+        </figure>
+    </div>
+    {% endif %}
+
+    {% if object.room_image4 %}
+    <div class="thumbs grid">
+        <figure class="effect-honey">
+            <img src="{{object.room_image4.url}}" alt=""/>
+        </figure>
+    </div>
+    {% endif %}
+
+    {% if object.room_image5 %}
+    <div class="thumbs grid">
+        <figure class="effect-honey">
+            <img src="{{object.room_image5.url}}" alt=""/>
+        </figure>
+    </div>
+    {% endif %}
+
+    {% if object.room_image6 %}
+    <div class="thumbs grid">
+        <figure class="effect-honey">
+            <img src="{{object.room_image6.url}}" alt=""/>
+        </figure>
+    </div>
+    {% endif %}
+</div><!-- /gallery -->
+
+{% endblock %}

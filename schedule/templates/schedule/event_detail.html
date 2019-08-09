@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col"></div>
+    <div class="col-6">
+        <div class="card justify-content-center border-secondary mb-3 mt-3" style="width: 30rem;">
+            <div class="card-header">{{object.title}}</div>
+            <div class="card-body text-secondary">
+                <h5 class="card-title">{{object.start_time|date:'Y-m-d / H:i'}} - {{object.end_time|date:'H:i'}}</h5>
+                <p class="card-text">{{object.description|safe}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+{% endblock %}

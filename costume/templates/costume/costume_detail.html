@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Rental Costume{% endblock %}
+
+{% block content %}
+
+{% load humanize %}
+<div class="section padding-inner">
+    <div class="container">
+        <div class="row">
+            <!-- Image Column -->
+            <div class="col-sm-6">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="{{object.image.url}}" alt="Project Name">
+                    </div>
+                </div>
+            </div>
+            <!-- End Image Column -->
+
+            <!-- Project Info Column -->
+            <div class="portfolio-item-description col-sm-6">
+                <h3>{{object.name}}</h3>
+                <p>{{object.description|safe}}</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><b>Price</b> ￦ {{object.price|intcomma}}</li>
+                    <li class="list-group-item"><b>Stock</b> : {{object.stock}}</li>
+                </ul>
+
+            </div>
+            <!-- End Project Info Column -->
+        </div>
+        <!-- End Row -->
+    </div>
+</div>
+
+{% endblock %}
