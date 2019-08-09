@@ -12,14 +12,7 @@
       <change afterPath="$PROJECT_DIR$/../fc_shopping/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../fc_shopping/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../fc_shopping/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/costume/templates/costume/category_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/costume/templates/costume/category_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/costume/templates/costume/costume_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/costume/templates/costume/costume_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/costume/templates/costume/costume_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/costume/templates/costume/costume_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenery/templates/scenery/category_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/scenery/templates/scenery/category_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule/templates/schedule/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/templates/schedule/calendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wps-fastflix/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../wps-fastflix/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../wps-fastflix/.idea/vcs.xml" beforeDir="false" />
@@ -78,11 +71,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/costume/templates/costume/category_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="435">
+              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="345">
+                <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -198,7 +203,6 @@
         <option value="$PROJECT_DIR$/layout/base.html" />
         <option value="$PROJECT_DIR$/config/asset_storage.py" />
         <option value="$PROJECT_DIR$/etc.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/schedule/templates/schedule/calendar.html" />
         <option value="$PROJECT_DIR$/static/css/main.css" />
@@ -206,6 +210,7 @@
         <option value="$PROJECT_DIR$/costume/templates/costume/costume_list.html" />
         <option value="$PROJECT_DIR$/costume/templates/costume/costume_detail.html" />
         <option value="$PROJECT_DIR$/costume/templates/costume/category_list.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -514,16 +519,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runtime.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -634,8 +629,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/costume/templates/costume/category_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="435">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="345">
+            <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
