@@ -5,26 +5,7 @@
 {% block content %}
 {% load humanize %}
 
-
-<div class="container padding-inner">
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <h3><a href="{% url 'costume:list' %}">All Post</a></h3>
-            {% for category in categories %}
-            {% if category.categories.all|length %}
-            <h5>{{category.name}}</h5>
-
-            {% for category in category.categories.all %}
-            <a href="{{category.get_absolute_url}}">{{category.name}}</a>
-            {% endfor %}
-
-            {% else %}
-            <a href="{{category.get_absolute_url}}">{{category.name}}</a>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-</div>
+{% include 'costume/category_list.html' %}
 
 {% for object in object_list %}
 <div class="container port-top">

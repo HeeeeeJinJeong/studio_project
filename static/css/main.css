@@ -1025,8 +1025,83 @@ figure.effect-honey:hover h2 i {
 	margin-bottom: -95px;
 }
 
+/* ----------------------------------------------------
+	CONTACT STYLES
+------------------------------------------------------- */
+
+.form-control {
+	display: block;
+	width: 90%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #a3e5e2;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.contact-info{
+	margin-top: 30px;
+}
+
+.more{
+	display: block;
+	margin-top: 5px;
+	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+	background-color: transparent;
+	line-height: 1.7em;
+}
+
+.working-hours{
+	padding: 15px 15px;
+	border: 15px double #E9E9E9;
+	margin-top: 30px;
+}
+
+.working-hours .heading{
+  font-size: 17px;
+  margin-top: 10px;
+  padding-bottom: 4px;
+  color: #333;
+  text-align: left;
+  font-weight: 700;
+  line-height: 1.4em;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.working-hours .hours{
+  font-size: 17px;
+  margin-top: 10px;
+  padding-bottom: 4px;
+  color: #333;
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.4em;
+  font-family: 'Josefin Sans', sans-serif;
+  display: block;
+
+}
+
+#map-canvas {
+	height: 400px;
+	width: auto;
+	margin-top: 90px;
+	margin-bottom: -95px;
+}
+
 /* ------------------------------------------------------------
-        Common styles
+        Calendar styles
 ------------------------------------------------------------ */
 
 body {
@@ -1104,7 +1179,7 @@ body {
 }
 
 #calendar {
-    text-align: right;
+  text-align: right;
   width: 100px;
   height: 120px;
   padding: 0px 5px 0px 20px;
@@ -1284,53 +1359,226 @@ img.zoom1-img:hover {
 }
 
 @media(max-width:600px) {
-	
-.contact-btn {
-	margin-bottom: 60px;
-}
 
-.col-xs-offset-2 {
-	margin-left: 0;
-}
-
-#header-v {
-	min-height: 140px;
-}
-
-.brand {
+    .brand {
         margin: 0;
         padding-top: 22px;
         text-align: center;
-}
+        background-color: #ffffff;
+    }
 
-}
+    body {
+      font-family: "ptsans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
 
-@media(max-width:480px) {
-	
-#header-v {
-	min-height: 70px;
-}
+    .left {
+      float: left;
+    }
 
-.gallery-caption h3 {
-	font-size: 22px;
-}
+    .right {
+      float: right;
+    }
+
+    .btn {
+      outline: none;
+      color: black;
+      background-color: transparent;
+      box-shadow: 0 0 0 0;
+      margin-right: 3px;
+    }
+
+    .clearfix {
+      margin: 15px;
+    }
+
+    .form {
+      margin: auto;
+    }
+
+    .form input, .form select, .form textarea {
+      border-radius: 5px;
+      border: 1px solid #17a2b8;
+      outline: none;
+      background: none;
+      padding: 5px;
+      width: 100%;
+    }
+
+    /* App styles */
+    .title {
+      text-align: center;
+      margin: 10px;
+    }
+
+    .calendar {
+      width: 98%;
+      margin: auto;
+      font-size: 13px;
+      border: 1px solid #17a2b8;
+    }
+
+    .calendar tr, .calendar td {
+      border: 1px solid #17a2b8;
+    }
+
+    .calendar th {
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .calendar td {
+      width: 100px;
+      height: 120px;
+    }
+
+    .month {
+      font-size: 25px;
+    }
+
+    .date {
+      text-align: right;
+      font-size: 16px;
+    }
+
+    #calendar {
+      text-align: right;
+      width: 100px;
+      height: 120px;
+      padding: 0px 5px 0px 20px;
+    }
+
+    a {
+      color: #17a2b8;
+    }
+
+    .contact-btn {
+        margin-bottom: 60px;
+    }
+
+    .col-xs-offset-2 {
+        margin-left: 0;
+    }
+
+    #header-v {
+        min-height: 140px;
+    }
+
+    .brand {
+            margin: 0;
+            padding-top: 22px;
+            text-align: center;
+    }
+
+    }
+
+    @media(max-width:480px) {
+
+    #header-v {
+        min-height: 70px;
+    }
+
+    .gallery-caption h3 {
+        font-size: 22px;
+    }
 
 
 }
 
 @media(max-width:400px) {
 	
-#header-v {
-	min-height: 0;
-}
+    #header-v {
+        min-height: 0;
+    }
 
-}
+    #map {
+        flex-basis: auto;
+        margin: 0 auto;
+    }
 
-/* ----------------------------------------------------
-	custom
-------------------------------------------------------- */
+    body {
+      font-family: "ptsans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
 
-#map {
-    flex-basis: auto;
-    margin: 0 auto;
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    .btn {
+      outline: none;
+      color: black;
+      background-color: transparent;
+      box-shadow: 0 0 0 0;
+      margin-right: 3px;
+    }
+
+    .clearfix {
+      margin: 15px;
+    }
+
+    .form {
+      margin: auto;
+    }
+
+    .form input, .form select, .form textarea {
+      border-radius: 5px;
+      border: 1px solid #17a2b8;
+      outline: none;
+      background: none;
+      padding: 5px;
+      width: 100%;
+    }
+
+    /* App styles */
+    .title {
+      text-align: center;
+      margin: 10px;
+    }
+
+    .calendar {
+      width: 98%;
+      margin: auto;
+      font-size: 13px;
+      border: 1px solid #17a2b8;
+    }
+
+    .calendar tr, .calendar td {
+      border: 1px solid #17a2b8;
+    }
+
+    .calendar th {
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .calendar td {
+      width: 100px;
+      height: 120px;
+    }
+
+    .month {
+      font-size: 25px;
+    }
+
+    .date {
+      text-align: right;
+      font-size: 16px;
+    }
+
+    #calendar {
+      text-align: right;
+      width: 100px;
+      height: 120px;
+      padding: 0px 5px 0px 20px;
+    }
+
+    a {
+      color: #17a2b8;
+    }
+
 }
