@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block title %}Rental Costume{% endblock %}
 
@@ -7,7 +8,23 @@
 
 {% include 'costume/category_list.html' %}
 
-<div class="card-deck">
+<div class="row">
+    <div class="col-10 ml-5">
+
+        <h3 class="ml-3">의상 대여 안내</h3>
+        <p class="block">모든 항목은 스튜디오 내에서만 대여가 가능합니다.<br><br>
+            문자/전화로 대여 가능여부 확인 후, 대여비용을 입금해주시고 예약페이지 기타 비고란에 의상대여(물품명) 같이 적어주세요.<br>
+            재고가 있을 시 현장 문의 및 결제도 가능합니다.<br><br>
+            모든 가발은 유료대여 의상과 함께 대여시 무료입니다.<br>
+            무료의상 혹은 개별 대여시 5,000원입니다.<br><br>
+            가발에 스프레이/본드 등의 셋팅을 하지 말아주세요.<br>
+            대여물품에 복구 불가능한 파손시 원가 손해배상을 받습니다.</p>
+        <div class="col"></div>
+    </div>
+</div>
+
+{% if object_list %}
+<div class="card-columns">
     {% for object in object_list %}
     <div class="card portfolio-item">
         <a href="page-portfolio-item.html"><img src="{{object.image.url}}" alt="Project Name"></a>
@@ -27,25 +44,47 @@
     {% endfor %}
 </div>
 
-{% if is_paginated %}
-<nav aria-label="Page navigation mt-5">
-    <ul class="pagination justify-content-center">
-        {% if page_obj.has_previous %}
-        <li class="page-item"><a class="page-link" href="?page={{page_obj.previous_page_number}}">Previous</a>
-        </li>
-        {% else %}
-        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+<div class="row mt-3">
+    <div class="col"></div>
+    <div class="col-4">
+        {% if is_paginated %}
+        <nav aria-label="Page navigation mt-5 justify-content-center">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link"
+                                         href="?page={{page_obj.previous_page_number}}">Previous</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                {% endif %}
+                {% for page in paginator.page_range %}
+                <li class="page-item"><a class="page-link" href="?page={{page}}">{{page}}</a></li>
+                {% endfor %}
+                {% if page_obj.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number}}">Next</a></li>
+                {% else %}
+                <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+                {% endif %}
+            </ul>
+        </nav>
         {% endif %}
-        {% for page in paginator.page_range %}
-        <li class="page-item"><a class="page-link" href="?page={{page}}">{{page}}</a></li>
-        {% endfor %}
-        {% if page_obj.has_next %}
-        <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number}}">Next</a></li>
-        {% else %}
-        <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
-        {% endif %}
-    </ul>
-</nav>
+    </div>
+    <div class="col"></div>
+</div>
+
+{% else %}
+<div class="row">
+    <div class="col"></div>
+    <div class="col-9">
+        <div class="card w-75 mt-5 ml-5 text-center">
+            <div class="card-body">
+                <h2 class="card-title">Posts Coming Soon</h2><br>
+                <p class="card-text"><h4>Explore other categories in this blog or check back later.</h4></p>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
 {% endif %}
 
 {% endblock %}
