@@ -7,22 +7,26 @@
 
 <a href="{% url 'appointment:create' %}" class="btn btn-outline-dark">write</a>
 
-
-<div class="card-columns">
+<table class="table table-hover text-center">
+    <thead>
+    <tr>
+        <th scope="col" class="text-center">#</th>
+        <th scope="col" class="text-center">제목</th>
+        <th scope="col" class="text-center">이름</th>
+        <th scope="col" class="text-center">작성일</th>
+    </tr>
+    </thead>
     {% for object in object_list %}
-    <div class="card text-center">
-        <div class="card-body">
-            <h5 class="card-title">{{object.title}}</h5>
-            <p class="card-text">{{object.name}}</p>
-            <p class="card-text">
-                <small class="text-muted">{{object.created|date:"Y-m-d"}}</small>
-            </p>
-        </div>
-
-        <a href="{% url 'appointment:detail' object.id %}" class="btn btn-outline-dark">Detail</a>
-    </div>
+    <tbody>
+    <tr>
+        <th scope="row" class="text-center">{{object.id}}</th>
+        <td><a href="{% url 'appointment:detail' object.id %}">{{object.title}}</a></td>
+        <td>{{object.name}}</td>
+        <td>{{object.created|date:"Y-m-d"}}</td>
+    </tr>
+    </tbody>
     {% endfor %}
-</div>
+</table>
 
 
 {% if is_paginated %}

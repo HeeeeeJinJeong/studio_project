@@ -39,17 +39,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+
+INSTALLED_APPS += [
     'ckeditor',
     'ckeditor_uploader',
     'django.contrib.humanize',
 
-    'home',
-    'information',
-    'scenery',
-    'appointment',
-    'schedule',
-    'costume',
-    'location',
+    'home', # 메인화면
+    'information', # 이용안내
+    'scenery', # 전경
+    'appointment', # 예약
+    'schedule', # 캘린더
+    'costume', # 의상 대여
+    'location', # 오시는 길
 ]
 
 MIDDLEWARE = [

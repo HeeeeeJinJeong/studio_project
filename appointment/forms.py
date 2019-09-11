@@ -13,6 +13,7 @@ class AppointmentForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['title'].label = "제목"
         self.fields['title'].widget = forms.TextInput()
+        self.fields['title'].widget.attrs = {'class': "form-control", 'placeholder': "예약합니다."}
 
         self.fields['name'].label = "입금자명"
         self.fields['name'].widget = forms.TextInput()
