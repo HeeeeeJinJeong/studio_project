@@ -13,22 +13,28 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.contrib import admin
-from django.urls import path, include
+from django.contrib.staticfiles.views import serve
+from django.urls import path, include, re_path
+
 # from django.conf import settings
 # from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 
     path('', include('home.urls')),
     path('information/', include('information.urls')),
     path('scenery/', include('scenery.urls')),
-    path('appointment/', include('appointment.urls')),
+    path('reservation/', include('reservation.urls')),
     path('schedule/', include('schedule.urls')),
     path('costume/', include('costume.urls')),
     path('location/', include('location.urls')),
 ]
 
-# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
