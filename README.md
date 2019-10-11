@@ -1,6 +1,4 @@
 # monoground studio
-http://13.209.234.90/<br>
-http://mono.jjjinnn.com/
 
 ### TODO
 1. 전경
