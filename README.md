@@ -1,4 +1,5 @@
 # monoground studio
+- 예약글 테스트 비밀번호는 1234 입니다.
 
 ### TODO
 1. 전경
