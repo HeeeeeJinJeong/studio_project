@@ -21,7 +21,7 @@ class ReservationForm(forms.ModelForm):
 
         self.fields['date_to'].label = "시작시간"
 
-        self.fields['date_to'].label = "종료시간"
+        self.fields['date_from'].label = "종료시간"
 
         self.fields['num_people'].label = "인원"
         self.fields['num_people'].widget.attrs = {'class': "form-control", 'placeholder': "인원을 선택해주세요"}
