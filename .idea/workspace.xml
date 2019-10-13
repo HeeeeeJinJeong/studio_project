@@ -35,8 +35,7 @@
       <change afterPath="$PROJECT_DIR$/../reservation/reservation/views.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../reservation/secrets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservation/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservation/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule/templates/schedule/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/templates/schedule/calendar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wps-fastflix/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../wps-fastflix/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../wps-fastflix/.idea/vcs.xml" beforeDir="false" />
